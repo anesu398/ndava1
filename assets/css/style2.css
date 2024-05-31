@@ -1,0 +1,140 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
+* {
+    box-sizing: border-box;
+  }
+
+
+ .page {
+  margin: 0 auto;
+  width: 920px;
+}
+ .content {
+  width: 33.33%;
+  height: fit-content;
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  height: 100vh;
+  max-width: 300px;
+}
+ .circle_inner__layer {
+  width: 600px;
+  height: 200px;
+  transition: all 0.4s;
+  position: absolute;
+  top: 0;
+  left: -200px;
+}
+ .circle_inner__layer img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+ .circle12 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50%;
+  width: 200px;
+  transform: translateY(-50%);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+ .circle:hover .circle_shine {
+  top: 330px;
+  left: -200px;
+}
+ .circle_shine {
+  background: rgb(172, 159, 159);
+  width: 600px;
+  transition: 0.3s;
+  height: 200px;
+  opacity: 0.2;
+  top: -10px;
+  left: -90px;
+  transform: rotate(45deg);
+  position: absolute;
+  z-index: 2;
+}
+ .circle:hover h2,  .circle:hover h3 {
+  opacity: 1;
+  top: -36px;
+}
+ .circle:hover .content_shadow {
+  transform: scale(1.1);
+  top: -22px;
+}
+ .circle:hover h3 {
+  transition: all 0.2s 0.04s;
+}
+ .circle:hover h2 {
+  transition: all 0.2s;
+}
+ .circle .circle_inner__layer:nth-of-type(1) {
+  top: 0px;
+  left: 0px;
+}
+ .circle .circle_inner__layer:nth-of-type(2) {
+  top: 0px;
+  left: -210px;
+}
+ .circle .circle_inner__layer:nth-of-type(3) {
+  top: 0px;
+  left: -440px;
+}
+ .circle_title {
+  text-align: center;
+}
+h2{
+  color: #000000;
+}
+ .circle_title ,  .circle_title  {
+  opacity: 10;
+  color: #000000;
+  margin: 0;
+  transition: all 0.2s 0.04s;
+  position: relative;
+  top: -10px;
+}
+ .circle_title h3 {
+  transition: all 0.2s;
+  color: #000000b2;
+  font-size: 15px;
+}
+ .circle_inner {
+  border-radius: 400px;
+  background: #83cccc;
+  overflow: hidden;
+  margin: auto;
+  width: 200px;
+  z-index: 1;
+  transition: all 0.3s;
+  height: 200px;
+  position: relative;
+}
+ .circle_inner:hover {
+  transform: scale(1.1);
+}
+ .circle_inner:hover .circle_inner__layer:nth-of-type(1) {
+  left: -80px;
+  transition: all 4s linear;
+}
+ .circle_inner:hover .circle_inner__layer:nth-of-type(2) {
+  left: -400px;
+  transition: all 4s linear;
+}
+ .circle_inner:hover .circle_inner__layer:nth-of-type(3) {
+  left: -140px;
+  transition: all 4s linear;
+}
+ .content_shadow {
+  width: 200px;
+  box-shadow: 0px 31px 19px -2px #57595c;
+  height: 20px;
+  border-radius: 70%;
+  position: relative;
+  top: -44px;
+  transition: all 0.3s;
+  z-index: 0;
+}
