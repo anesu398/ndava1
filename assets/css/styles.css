@@ -35,8 +35,8 @@
   }
 }
 .circle{
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 100px;
   border-radius: 50%;
   filter: blur(60px);
 }
@@ -146,7 +146,7 @@ position: absolute;
 h1 {
   position: relative;
   z-index: 1;
-  font-size: 90px;
+  font-size: 80px;
   letter-spacing: 5px;
   color: #fff;
   
@@ -182,8 +182,6 @@ img {
 
 .projects__container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-template-rows: repeat(2, auto); /* 2 rows */
   gap: 20px; /* Space between items */
   justify-content: center; /* Center the grid items */
 }
@@ -219,7 +217,7 @@ img {
   display: inline-block;
   margin: 15px 0;
   padding: 10px 20px;
-  background: #007bff;
+  background: #007bff00;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -414,78 +412,155 @@ form input[type=email]:focus, form input[type=password]:focus {
   box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
 }
 /*weather*/
-
-.card{
-  cursor:pointer;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:1.7rem;
-  height:160px;
-  width:400px;
-  border-radius:30px;
-  margin:15px 0;
-  background: rgba( 255, 255, 255, 0.05 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 16.5px );
-  -webkit-backdrop-filter: blur( 16.5px );
+/* General Card Styles */
+.card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; /* Changed to column for better vertical alignment */
+  justify-content: space-between;
+  align-items: flex-start; /* Changed to align text to the start */
+  padding: 1.7rem;
+  height: auto; /* Updated for responsive height */
+  width: 400px;
   border-radius: 30px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-
-
-}
-sup{
-  font-family: Poppins;
-font-style: normal;
-font-weight: 600;
-font-size: 15px;
-line-height: 22px;
-/* identical to box height */
-
-text-transform: capitalize;
+  margin: 15px 0;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(16.5px);
+  -webkit-backdrop-filter: blur(16.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow: hidden; /* Ensures content does not overflow */
 }
 
-.location{
-font-family: Poppins;
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 33px;
-/* identical to box height */
-text-transform: capitalize;
-color: #000;
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+  .home__data {
+    position: relative;
+    z-index: 1; /* Ensures the text is below the cards */
+  }
 
-}
-.card_bg{
-  background-size:cover;
- padding:2rem;
- width:310px;
- height:640px;
- 
-}
-.degree{
-  font-size: 28px;
-line-height: 10px;
-/* identical to box height */
-text-transform: capitalize;
-  color: #1f1818;
-  font-family:'Poppins',sans-serif;
+  .card-bg {
+    width: 100%;
+    height: auto;
+    position: absolute;
+  top: 0; /* Adjust as needed */
+  left: 0; /* Adjust as needed */
+  right: 0; /* Adjust as needed */
+  bottom: 0; /* Adjust as needed */
+    z-index: 2;
+  }
+  
+  .degree {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  
+  .weather-status {
+    font-size: 11px;
+  }
+  
+  .card-image img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .location {
+    font-size: 14px; /* Adjusted for smaller screens */
+  }
 }
 
-.weather-status{
-  font-family: sans-serif;
+@media screen and (max-width: 480px) {
+  .card {
+    padding: 0.8rem;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 15px;
+  }
+
+  .card-bg {
+    width: 100%;
+    height: auto;
+  }
+  .home__data {
+    position: relative;
+    z-index: 1; /* Ensures the text is below the cards */
+  }
+
+  .degree {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  
+  .weather-status {
+    font-size: 10px;
+  }
+  
+  .card-image img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .location {
+    font-size: 12px; /* Further adjusted for very small screens */
+  }
+}
+
+/* Sup and Location styles */
+sup {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.9375rem; /* Adjusted to rem units */
+  line-height: 1.4;
+  text-transform: capitalize;
+}
+
+.location {
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 13px;
-  line-height: 20px;
+  font-size: 1rem; /* Adjusted to rem units */
+  line-height: 1.5;
+  text-transform: capitalize;
+  color: #000;
+  overflow-wrap: break-word; /* Ensures text breaks and stays within container */
+}
+
+.card_bg {
+  background-size: cover;
+  padding: 1rem;
+  width: 100%; /* Adjusted for responsiveness */
+  height: auto; /* Adjusted for responsiveness */
+}
+
+.degree {
+  font-size: 1.75rem; /* Adjusted to rem units */
+  line-height: 1.2;
+  text-transform: capitalize;
+  color: #1f1818;
+}
+
+.weather-status {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8125rem; /* Adjusted to rem units */
+  line-height: 1.5;
   text-transform: uppercase;
-  color:#88888855;
-  font-family:'Poppins',sans-serif;
+  color: #88888855;
 }
-.card-image img{
-  width:100px;
-  height:100px;
+
+.card-image img {
+  width: 100px;
+  height: 100px;
 }
+
 
 /*===== NAV =====*/
 .nav {
@@ -569,6 +644,15 @@ text-transform: capitalize;
   row-gap: 5rem;
   padding: 4rem 0 5rem;
 }
+.home p { /* Assuming text is inside <p> tags */
+  margin-top: -1rem; /* Adjust as needed */
+}
+.home-text-wrapper {
+  position: relative;
+  top: -1rem; /* Adjust as needed */
+  z-index: 1;
+}
+
 
 .home__data {
   align-self: center;
@@ -604,6 +688,7 @@ text-transform: capitalize;
   right: 0;
   bottom: 0;
   width: 260px;
+  z-index: 2;
 }
 
 .home__blob {
@@ -770,24 +855,122 @@ text-transform: capitalize;
   border-radius: .5rem;
 }
 
-/* ===== WORK =====*/
-.work__container {
-  row-gap: 2rem;
-  position:relative;
+/* General Styles for Work Section */
+.work {
+  padding: 2rem;
 }
 
-.work__img {
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
-  border-radius: .5rem;
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.content {
+  flex: 1 1 calc(33.333% - 2rem); /* Adjust based on the number of items you want in a row */
+  max-width: calc(33.333% - 2rem);
+  display: flex;
+  justify-content: center;
+}
+
+.circle12 {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
   overflow: hidden;
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
 }
 
-.work__img img {
-  transition: 1s;
+.circle_title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
 }
 
-.work__img img:hover {
-  transform: scale(1.1);
+.circle_inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle_inner__layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s;
+}
+
+.circle_inner__layer img {
+  width: 100%;
+  height: auto;
+  transition: transform 1s;
+}
+
+.content_shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+  .content {
+    flex: 1 1 calc(50% - 1rem); /* Two items per row on tablets */
+    max-width: calc(50% - 1rem);
+  }
+
+  .circle12 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .circle_title h2, .circle_title h3 {
+    font-size: 1rem;
+  }
+
+  .circle_inner__layer img {
+    transform: scale(1.05);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    flex: 1 1 100%; /* Stack items on top of each other on smaller screens */
+    max-width: 100%;
+  }
+
+  .circle12 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .circle_title h2, .circle_title h3 {
+    font-size: 0.875rem;
+  }
+
+  .circle_inner__layer img {
+    transform: scale(1.1);
+  }
 }
 
 /* ===== CONTACT =====*/
