@@ -445,9 +445,7 @@ form input:hover {
 form input[type=email]:focus, form input[type=password]:focus {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
-}
-/*weather*/
-/* General Card Styles */
+}/* General Card Styles */
 .card {
   cursor: pointer;
   display: flex;
@@ -475,20 +473,13 @@ form input[type=email]:focus, form input[type=password]:focus {
     max-width: 100%;
     border-radius: 20px;
   }
-  .home__data {
-    position: relative;
-    z-index: 1; /* Ensures the text is below the cards */
-  }
-
+  
   .card-bg {
     width: 100%;
     height: auto;
-    position: absolute;
-  top: 0; /* Adjust as needed */
-  left: 0; /* Adjust as needed */
-  right: 0; /* Adjust as needed */
-  bottom: 0; /* Adjust as needed */
+    position: relative; /* Updated to ensure positioning within the card */
     z-index: 2;
+    top: 660px;
   }
   
   .degree {
@@ -516,17 +507,17 @@ form input[type=email]:focus, form input[type=password]:focus {
     width: 100%;
     max-width: 100%;
     border-radius: 15px;
+    margin: 20px 0; /* Increased margin to ensure spacing on smaller screens */
   }
 
   .card-bg {
     width: 100%;
     height: auto;
+    position: relative; /* Ensures the background image is relative to the card */
+    top: 660px; /* Move cards lower */
+    z-index: 2;
   }
-  .home__data {
-    position: relative;
-    z-index: 1; /* Ensures the text is below the cards */
-  }
-
+  
   .degree {
     font-size: 20px;
     line-height: 1.2;
