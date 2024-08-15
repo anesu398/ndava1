@@ -176,6 +176,59 @@ img {
   height: auto;
   display: block;
 }
+.projects {
+  padding: 60px 0;
+}
+
+.projects__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, auto); /* 2 rows */
+  gap: 20px; /* Space between items */
+  justify-content: center; /* Center the grid items */
+}
+
+.project {
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 100%; /* Ensure projects take full width of their grid cell */
+}
+
+.project__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.project__title {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.project__description {
+  padding: 0 15px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.project__link {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.project__link:hover {
+  background: #0057b300;
+}
+
 
 /*===== CLASS CSS ===== */
 .section-title {
