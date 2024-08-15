@@ -443,7 +443,7 @@ form input[type=email]:focus, form input[type=password]:focus {
 @media screen and (max-width: 768px) {
   .card {
     padding: 1rem;
-    width: 100%;
+    width: 300px;
     max-width: 100%;
     border-radius: 20px;
   }
@@ -485,7 +485,7 @@ form input[type=email]:focus, form input[type=password]:focus {
 @media screen and (max-width: 480px) {
   .card {
     padding: 0.8rem;
-    width: 100%;
+    width: 300px;
     max-width: 100%;
     border-radius: 15px;
   }
