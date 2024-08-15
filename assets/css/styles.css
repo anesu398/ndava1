@@ -143,14 +143,42 @@ border: 1px solid rgba(255, 255, 255, 0.18);
 position: absolute;
 }
 
+/* Default h1 Styles */
 h1 {
   position: relative;
   z-index: 1;
-  font-size: 80px;
+  font-size: 80px; /* Default font size */
   letter-spacing: 5px;
   color: #fff;
-  
+  line-height: 1.2; /* Adjust as needed for better readability */
 }
+
+/* Responsive h1 Styles */
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 60px; /* Adjust font size for medium screens */
+  }
+}
+
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 50px; /* Adjust font size for tablets */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px; /* Adjust font size for small screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 30px; /* Adjust font size for very small screens */
+    letter-spacing: 3px; /* Reduce letter spacing for smaller screens */
+  }
+}
+
 h2, p {
   margin: 0;
 }
