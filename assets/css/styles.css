@@ -704,13 +704,13 @@ form input[type=button]:hover {
   border-radius: 30px;
   margin: 15px 0;
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   box-shadow: inset 1px 1px 0.12px rgba(255, 255, 255, 0.4),
     1px 1px 3px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 15px 15px 30px #8b8b8b, -15px -15px 30px #ffffff;
   overflow: hidden;
   color: #333;
 }
