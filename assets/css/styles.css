@@ -280,164 +280,91 @@ img {
   padding-left: 10px;
 }
 /*contact form*/
-
+/* Container Neumorphism */
 .container {
   position: relative;
   transform: translate(-50%, -20%);
   top: 50%;
   left: 50%;
-  background: rgba(255, 255, 255, 0);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-right-color: rgba(255, 255, 255, 0.1);
-  border-bottom-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
- 
+  background: #ebebeb;
+  border-radius: 20px;
+  box-shadow: 15px 15px 30px #c2c2c2, -15px -15px 30px #ffffff;
+  padding: 2rem;
 }
 
+/* Form Neumorphism */
 form {
-  background: rgba(232, 226, 226, 0.59);
+  background: #f2f2f2;
   padding: 3em;
-  height: 320px;
+  height: auto;
   border-radius: 20px;
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 20px #c0c0c0, -10px -10px 20px #ffffff;
   text-align: center;
   position: relative;
   transition: all 0.2s ease-in-out;
-}
-form input[type=button] {
-  margin-top: 10px;
-  width: 150px;
-  font-size: 1rem;
+  color: #333;
 }
 
-form input[type=button]:hover {
-  cursor: pointer;
-}
-form input[type=button]:active {
-  background: #908b9cbd;
-}
-form:hover {
-  margin: 4px;
-}
-::-moz-placeholder {
-  font-family: Montserrat, sans-serif;
-  font-weight: 400;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-:-ms-input-placeholder {
-  font-family: Montserrat, sans-serif;
-  font-weight: 400;
-  color: #f0eded;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-::placeholder {
-  font-family: Montserrat, sans-serif;
-  font-weight: 400;
-  color: #f9f9f9;
-  text-shadow: 2px 2px 4px rgba(255, 248, 248, 0);
-}
-
-.drop {
-  background: rgba(61, 61, 61, 0.048);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 10px;
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  transition: all 0.2s ease;
-}
-.drop-1 {
-  height: 80px;
-  width: 80px;
-  top: -20px;
-  left: -40px;
-  z-index: -1;
-}
-.drop-2 {
-  height: 80px;
-  width: 80px;
-  bottom: -30px;
-  right: -10px;
-}
-.drop-3 {
-  height: 100px;
-  width: 100px;
-  bottom: 120px;
-  right: -50px;
-  z-index: -1;
-}
-.drop-4 {
-  height: 120px;
-  width: 120px;
-  top: -60px;
-  right: -60px;
-}
-.drop-5 {
-  height: 60px;
-  width: 60px;
-  bottom: 170px;
-  left: 90px;
-  z-index: -1;
-}
-
-form input {
-  background: transparent;
+/* Rounded Input Fields Neumorphism */
+form input, form textarea {
+  background: #ebebeb;
   width: 200px;
   padding: 1em;
   margin-bottom: 2em;
   border: none;
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 5000px;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
-  color: #fff;
+  border-radius: 30px; /* Rounded texture */
+  box-shadow: inset 8px 8px 16px #c7c7c7, inset -8px -8px 16px #ffffff;
+  color: #333;
   font-family: Montserrat, sans-serif;
   font-weight: 500;
   transition: all 0.2s ease-in-out;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
-form input:hover {
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+
+form input:hover, form textarea:hover {
+  background: #e0e0e0;
+  box-shadow: inset 6px 6px 12px #c2c2c2, inset -6px -6px 12px #ffffff;
 }
-form input[type=email]:focus, form input[type=password]:focus {
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+
+/* Button Neumorphism */
+form input[type=button] {
+  margin-top: 10px;
+  width: 150px;
+  font-size: 1rem;
+  background: #ebebeb;
+  border-radius: 20px;
+  box-shadow: 8px 8px 16px #c2c2c2, -8px -8px 16px #ffffff;
+  color: #333;
+  transition: all 0.3s ease;
 }
-/*weather*/
-/* General Card Styles */
+
+form input[type=button]:hover {
+  background: #e0e0e0;
+  box-shadow: inset 8px 8px 16px #c2c2c2, inset -8px -8px 16px #ffffff;
+  cursor: pointer;
+}
+
+/* Card Neumorphism */
 .card {
   cursor: pointer;
   display: flex;
-  flex-direction: column; /* Changed to column for better vertical alignment */
+  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start; /* Changed to align text to the start */
+  align-items: flex-start;
   padding: 1.7rem;
-  height: auto; /* Updated for responsive height */
+  height: auto;
   width: 400px;
   border-radius: 30px;
   margin: 15px 0;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(16.5px);
-  -webkit-backdrop-filter: blur(16.5px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  overflow: hidden; /* Ensures content does not overflow */
+  background: #ebebeb;
+  box-shadow: 15px 15px 30px #c2c2c2, -15px -15px 30px #ffffff;
+  overflow: hidden;
+  color: #333;
 }
+
+.card:hover {
+  box-shadow: 12px 12px 24px #c2c2c2, -12px -12px 24px #ffffff;
+}
+
 
 /* Responsive Adjustments */
 @media screen and (max-width: 768px) {
@@ -516,6 +443,11 @@ form input[type=email]:focus, form input[type=password]:focus {
   .location {
     font-size: 12px; /* Further adjusted for very small screens */
   }
+}
+.counter {
+  font-size: 2rem;
+  color: #333;
+  margin: 20px;
 }
 
 /* Sup and Location styles */
@@ -1036,6 +968,27 @@ sup {
 
 .footer__copy {
   font-size: var(--smaller-font-size);
+}
+.glassIco {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  background: #e0e0e0; /* Light gray for the Neumorphism effect */
+  border-radius: 50%;
+  box-shadow: 9px 9px 16px #a3a3a3, -9px -9px 16px #ffffff; /* Neumorphism effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.glassIco:hover {
+  box-shadow: inset 9px 9px 16px #a3a3a3, inset -9px -9px 16px #ffffff; /* Inset shadow on hover for a pressed effect */
+}
+
+.glassIco i {
+  color: #000; /* Icon color */
+  font-size: 1.5rem;
 }
 
 /* ===== MEDIA QUERIES=====*/

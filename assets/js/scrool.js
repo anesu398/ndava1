@@ -212,7 +212,7 @@
 
 		if (this.constructor.debug && console) {
 			var report = "%cScrollReveal: " + message;
-			details.forEach(function (detail) { return (report += "\n — " + detail); });
+			details.forEach(function (detail) { return (report += "\n ï¿½ " + detail); });
 			console.log(report, 'color: #ea654b;'); // eslint-disable-line no-console
 		}
 	}
@@ -366,15 +366,23 @@
 		}
 		return matrix
 	}
-
+	fetch('http://localhost:3000/visitor-count')
+	.then(response => response.json())
+	.then(data => {
+		document.getElementById('visitorCount').textContent = data.count;
+	})
+	.catch(err => {
+		console.error('Error fetching visitor count:', err);
+		document.getElementById('visitorCount').textContent = 'Error';
+	});
 	/**
 	 * Returns a 4x4 matrix describing the combined transformations
 	 * of both arguments.
 	 *
-	 * > **Note:** Order is very important. For example, rotating 45°
+	 * > **Note:** Order is very important. For example, rotating 45ï¿½
 	 * along the Z-axis, followed by translating 500 pixels along the
 	 * Y-axis... is not the same as translating 500 pixels along the
-	 * Y-axis, followed by rotating 45° along on the Z-axis.
+	 * Y-axis, followed by rotating 45ï¿½ along on the Z-axis.
 	 *
 	 * @param  {array} m - Accepts both short and long form matrices.
 	 * @param  {array} x - Accepts both short and long form matrices.
@@ -582,7 +590,7 @@
 			var axis = config.origin === 'top' || config.origin === 'bottom' ? 'Y' : 'X';
 
 			/**
-			 * Let’s make sure our our pixel distances are negative for top and left.
+			 * Letï¿½s make sure our our pixel distances are negative for top and left.
 			 * e.g. { origin: 'top', distance: '25px' } starts at `top: -25px` in CSS.
 			 */
 			var distance = config.distance;
@@ -639,7 +647,7 @@
 				 * matrixes, which means browsers won't transition
 				 * elements with zero scale.
 				 *
-				 * That’s inconvenient for the API and developer
+				 * Thatï¿½s inconvenient for the API and developer
 				 * experience, so we simply nudge their value
 				 * slightly above zero; this allows browsers
 				 * to transition our element as expected.
@@ -1032,7 +1040,7 @@
 			}
 
 			/**
-			 * If our element isn’t resetting, we check the
+			 * If our element isnï¿½t resetting, we check the
 			 * element sequence index against the head, and
 			 * then the foot of the sequence.
 			 */
@@ -1218,7 +1226,7 @@
 
 		/**
 		 * Now that element set-up is complete...
-		 * Let’s commit any container and sequence data we have to the store.
+		 * Letï¿½s commit any container and sequence data we have to the store.
 		 */
 		each(containerBuffer, function (container) {
 			this$1.store.containers[container.id] = {
@@ -1427,7 +1435,7 @@
 			});
 
 			/**
-			 * Due to how the sequencer is implemented, it’s
+			 * Due to how the sequencer is implemented, itï¿½s
 			 * important that we update the state of all
 			 * elements, before any animation logic is
 			 * evaluated (in the second loop below).
