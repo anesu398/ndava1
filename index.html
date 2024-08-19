@@ -9,6 +9,8 @@
         <!-- =====BOX ICONS===== -->
          <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
          <link rel="stylesheet" href="fontawesome-free-6.1.2-web/css/all.css">
+         <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 
 
         <title>Anesu Ndava</title>
@@ -238,29 +240,29 @@
             <!--===== CONTACT =====-->
             <section class="contact section" id="contact">
                 <h2 class="section-title">Contact</h2>
-
+            
                 <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id=""  class="contact__input"></textarea>
-                        <input type="button" value="lets talk!" class="contact__button button">
+                    <form id="contact-form" class="contact__form">
+                        <input type="text" name="from_name" placeholder="Name" class="contact__input" required>
+                        <input type="email" name="from_email" placeholder="Email" class="contact__input" required>
+                        <textarea name="message" placeholder="Message" class="contact__input" required></textarea>
+                        <input type="submit" value="Let's Talk!" class="contact__button button">
                         <div class="drops">
                             <div class="drop drop-1"></div>
                             <div class="drop drop-2"></div>
                             <div class="drop drop-3"></div>
                             <div class="drop drop-4"></div>
                             <div class="drop drop-5"></div>
-                          </div>
+                        </div>
                     </form>
-                    
                 </div>
                 <div class="circlebg">
-                  <div class="circle circle-red"></div>
-                  <div class="circle circle-green"></div>
+                    <div class="circle circle-red"></div>
+                    <div class="circle circle-green"></div>
                 </div>
             </section>
-        </main>
+            <div id="toast-container"></div>
+            
 
         <!--===== FOOTER =====-->
         <footer class="footer">

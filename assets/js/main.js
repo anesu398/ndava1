@@ -218,3 +218,34 @@ function getPath(update, smoothing) {
         d = points.reduce((acc, point, i, a) => i === 0 ? `M ${point[0]},${point[1]}` : `${acc} ${getPoint(point, i, a, smoothing)}`, '');
     return `<path d="${d}" /><path class="progress" d="${d}" />`;
 }
+document.addEventListener("DOMContentLoaded", function () {
+    // Initialize EmailJS
+    emailjs.init("bb43OPQASYlSQ3lru");
+
+    const form = document.getElementById('contact-form');
+    const toastContainer = document.getElementById('toast-container');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        emailjs.sendForm('service_y7el86p', 'template_t8r7cku', form)
+            .then(function () {
+                showToast('Success! Your message has been sent.', 'success');
+                form.reset();
+            }, function (error) {
+                showToast('Error! Please try again later.', 'error');
+                console.log('FAILED...', error);
+            });
+    });
+
+    function showToast(message, type) {
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
+        toast.textContent = message;
+        toastContainer.appendChild(toast);
+
+        setTimeout(function () {
+            toast.remove();
+        }, 3000);
+    }
+});
